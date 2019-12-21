@@ -1,6 +1,5 @@
 package id.kakzaki.headup_loading
 
-import androidx.annotation.NonNull;
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
@@ -10,7 +9,7 @@ import io.flutter.plugin.common.PluginRegistry.Registrar
 
 /** HeadupLoadingPlugin */
 public class HeadupLoadingPlugin: FlutterPlugin, MethodCallHandler {
-  override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
+  override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
     val channel = MethodChannel(flutterPluginBinding.getFlutterEngine().getDartExecutor(), "headup_loading")
     channel.setMethodCallHandler(HeadupLoadingPlugin());
   }
@@ -32,7 +31,7 @@ public class HeadupLoadingPlugin: FlutterPlugin, MethodCallHandler {
     }
   }
 
-  override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
+  override fun onMethodCall(call: MethodCall,result: Result) {
     if (call.method == "getPlatformVersion") {
       result.success("Android ${android.os.Build.VERSION.RELEASE}")
     } else {
@@ -40,6 +39,6 @@ public class HeadupLoadingPlugin: FlutterPlugin, MethodCallHandler {
     }
   }
 
-  override fun onDetachedFromEngine(@NonNull binding: FlutterPlugin.FlutterPluginBinding) {
+  override fun onDetachedFromEngine( binding: FlutterPlugin.FlutterPluginBinding) {
   }
 }
