@@ -41,9 +41,9 @@ class HeadUpLoading extends PopupRoute {
   @override
   bool get barrierDismissible => false;
 
-
   @override
-  Widget buildPage(BuildContext context, Animation<double> animation,Animation<double> secondaryAnimation) {
+  Widget buildPage(BuildContext context, Animation<double> animation,
+      Animation<double> secondaryAnimation) {
     return Stack(
       children: <Widget>[
         Container(
@@ -96,9 +96,9 @@ class CupertinoHeadUpLoading extends PopupRoute {
   @override
   bool get barrierDismissible => false;
 
-
   @override
-  Widget buildPage(BuildContext context, Animation<double> animation,Animation<double> secondaryAnimation) {
+  Widget buildPage(BuildContext context, Animation<double> animation,
+      Animation<double> secondaryAnimation) {
     return Center(
       child: CupertinoActivityIndicator(
         radius: 30,
