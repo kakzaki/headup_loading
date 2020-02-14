@@ -1,3 +1,4 @@
+import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:headup_loading/headup_loading.dart';
@@ -59,8 +60,12 @@ class _HomeState extends State<Home> {
   }
 
   Future<void> showLoadingCustom() async {
-    CustomLoading.show(context: context,darken: true,child: CircularProgressIndicator());
-    Future.delayed(Duration(seconds: 2)).then((val) {
+    CustomLoading.show(
+        context: context,
+        darken: false,
+        child: Container(width:200,height:200,child: FlareActor("assets/orbloader.flr", alignment:Alignment.center, fit:BoxFit.contain, animation:"Aura",))
+    );
+    Future.delayed(Duration(seconds: 5)).then((val) {
       CustomLoading.hide();
     });
   }

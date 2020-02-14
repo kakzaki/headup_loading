@@ -25,8 +25,8 @@ flutter:
   # adding or updating assets for this project.
 
   # To add assets to your plugin package, add an assets section, like this:
-  assets:
-    - assets/orbloader.flr
+  # assets:
+  #  - assets/orbloader.flr
   #  - images/a_dot_ham.jpeg
   #
   # For details regarding assets in packages, see
