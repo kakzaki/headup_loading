@@ -36,7 +36,9 @@ class _HomeState extends State<Home> {
               RaisedButton(
                   onPressed: showLoading, child: new Text("Show Loading")),
               RaisedButton(
-                  onPressed: showLoadingCupertino, child: new Text("Show Loading Cupertino"))
+                  onPressed: showLoadingCupertino, child: new Text("Show Loading Cupertino")),
+              RaisedButton(
+                  onPressed: showLoadingCustom, child: new Text("Show Loading Custom")),
             ],
        )),
     );
@@ -55,4 +57,12 @@ class _HomeState extends State<Home> {
       CupertinoHeadUpLoading.hide();
     });
   }
+
+  Future<void> showLoadingCustom() async {
+    CustomLoading.show(context: context,darken: true,child: CircularProgressIndicator());
+    Future.delayed(Duration(seconds: 2)).then((val) {
+      CustomLoading.hide();
+    });
+  }
+
 }
