@@ -7,7 +7,7 @@ class HeadUpLoading extends PopupRoute {
   static Future<void> show(BuildContext context) async {
     try {
       if (_currentHud != null) {
-        _currentHud.navigator.pop();
+        _currentHud!.navigator!.pop();
       }
       HeadUpLoading hud = HeadUpLoading();
       _currentHud = hud;
@@ -20,20 +20,20 @@ class HeadUpLoading extends PopupRoute {
   //hide loading
   static Future<void> hide() async {
     try {
-      _currentHud.navigator.pop();
+      _currentHud!.navigator!.pop();
       _currentHud = null;
     } catch (e) {
       _currentHud = null;
     }
   }
 
-  static HeadUpLoading _currentHud;
+  static HeadUpLoading? _currentHud;
 
   @override
-  Color get barrierColor => null;
+  Color? get barrierColor => null;
 
   @override
-  String get barrierLabel => null;
+  String? get barrierLabel => null;
 
   @override
   Duration get transitionDuration => kThemeAnimationDuration;
@@ -64,7 +64,7 @@ class CupertinoHeadUpLoading extends PopupRoute {
   static Future<void> show(BuildContext context) async {
     try {
       if (_currentHud != null) {
-        _currentHud.navigator.pop();
+        _currentHud!.navigator!.pop();
       }
       CupertinoHeadUpLoading hud = CupertinoHeadUpLoading();
       _currentHud = hud;
@@ -77,20 +77,20 @@ class CupertinoHeadUpLoading extends PopupRoute {
   //hide loading
   static Future<void> hide() async {
     try {
-      _currentHud.navigator.pop();
+      _currentHud!.navigator!.pop();
       _currentHud = null;
     } catch (e) {
       _currentHud = null;
     }
   }
 
-  static CupertinoHeadUpLoading _currentHud;
+  static CupertinoHeadUpLoading? _currentHud;
 
   @override
-  Color get barrierColor => null;
+  Color? get barrierColor => null;
 
   @override
-  String get barrierLabel => null;
+  String? get barrierLabel => null;
 
   @override
   Duration get transitionDuration => kThemeAnimationDuration;
@@ -111,16 +111,16 @@ class CupertinoHeadUpLoading extends PopupRoute {
 
 
 class CustomLoading extends PopupRoute {
-  final Widget loader;
+  final Widget? loader;
   final bool darkbackground;
 
   CustomLoading( this.loader, this.darkbackground);
 
   // show loading
-  static Future<void> show({@required BuildContext context, Widget child, bool darken = false}) async {
+  static Future<void> show({required BuildContext context, Widget? child, bool darken = false}) async {
     try {
       if (_currentHud != null) {
-        _currentHud.navigator.pop();
+        _currentHud!.navigator!.pop();
       }
       CustomLoading hud = CustomLoading(child,darken);
       _currentHud = hud;
@@ -133,20 +133,20 @@ class CustomLoading extends PopupRoute {
   //hide loading
   static Future<void> hide() async {
     try {
-      _currentHud.navigator.pop();
+      _currentHud!.navigator!.pop();
       _currentHud = null;
     } catch (e) {
       _currentHud = null;
     }
   }
 
-  static CustomLoading _currentHud;
+  static CustomLoading? _currentHud;
 
   @override
-  Color get barrierColor => null;
+  Color? get barrierColor => null;
 
   @override
-  String get barrierLabel => null;
+  String? get barrierLabel => null;
 
   @override
   Duration get transitionDuration => kThemeAnimationDuration;

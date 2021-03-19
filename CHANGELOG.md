@@ -1,3 +1,7 @@
+## 1.0.4
+
+* Migrate to null-safety
+
 ## 1.0.3
 
 * Release ver 1.0.3
