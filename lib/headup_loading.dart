@@ -57,8 +57,6 @@ class HeadUpLoading extends PopupRoute {
   }
 }
 
-
-
 class CupertinoHeadUpLoading extends PopupRoute {
   // show loading
   static Future<void> show(BuildContext context) async {
@@ -109,20 +107,22 @@ class CupertinoHeadUpLoading extends PopupRoute {
   }
 }
 
-
 class CustomLoading extends PopupRoute {
   final Widget? loader;
   final bool darkbackground;
 
-  CustomLoading( this.loader, this.darkbackground);
+  CustomLoading(this.loader, this.darkbackground);
 
   // show loading
-  static Future<void> show({required BuildContext context, Widget? child, bool darken = false}) async {
+  static Future<void> show(
+      {required BuildContext context,
+      Widget? child,
+      bool darken = false}) async {
     try {
       if (_currentHud != null) {
         _currentHud!.navigator!.pop();
       }
-      CustomLoading hud = CustomLoading(child,darken);
+      CustomLoading hud = CustomLoading(child, darken);
       _currentHud = hud;
       Navigator.push(context, hud);
     } catch (e) {
@@ -160,7 +160,9 @@ class CustomLoading extends PopupRoute {
     return Stack(
       children: <Widget>[
         Container(
-          color: darkbackground?Color.fromRGBO(0, 0, 0, 0.6):Colors.transparent,
+          color: darkbackground
+              ? Color.fromRGBO(0, 0, 0, 0.6)
+              : Colors.transparent,
         ),
         Center(
           child: loader,
@@ -169,4 +171,3 @@ class CustomLoading extends PopupRoute {
     );
   }
 }
-

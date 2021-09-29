@@ -1,6 +1,6 @@
 name: headup_loading
 description: A Flutter plugin for heads up display progress indicator, support ios, android, macos and web
-version: 1.0.4
+version: 1.0.5
 homepage: https://github.com/kakzaki/headup_loading
 
 environment:

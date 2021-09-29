@@ -11,7 +11,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(home: Home());
@@ -37,11 +36,13 @@ class _HomeState extends State<Home> {
               RaisedButton(
                   onPressed: showLoading, child: new Text("Show Loading")),
               RaisedButton(
-                  onPressed: showLoadingCupertino, child: new Text("Show Loading Cupertino")),
+                  onPressed: showLoadingCupertino,
+                  child: new Text("Show Loading Cupertino")),
               RaisedButton(
-                  onPressed: showLoadingCustom, child: new Text("Show Loading Custom")),
+                  onPressed: showLoadingCustom,
+                  child: new Text("Show Loading Custom")),
             ],
-       )),
+          )),
     );
   }
 
@@ -63,11 +64,17 @@ class _HomeState extends State<Home> {
     CustomLoading.show(
         context: context,
         darken: false,
-        child: Container(width:200,height:200,child: FlareActor("assets/orbloader.flr", alignment:Alignment.center, fit:BoxFit.contain, animation:"Aura",))
-    );
+        child: Container(
+            width: 200,
+            height: 200,
+            child: FlareActor(
+              "assets/orbloader.flr",
+              alignment: Alignment.center,
+              fit: BoxFit.contain,
+              animation: "Aura",
+            )));
     Future.delayed(Duration(seconds: 5)).then((val) {
       CustomLoading.hide();
     });
   }
-
 }

@@ -1,3 +1,7 @@
+## 1.0.5
+
+* Dart Formater
+
 ## 1.0.4
 
 * Migrate to null-safety
