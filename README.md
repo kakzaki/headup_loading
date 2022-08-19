@@ -97,4 +97,6 @@ If you like my content, please consider buying me a coffee. Thank you for your s
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Z8Z6656JW)
 
+bagi yang dari Indonesia bisa lewat saweria berikut
+
 https://saweria.co/kakzaki
